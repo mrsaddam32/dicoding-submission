@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submission Dicoding - Bookshelf App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Bookshelf App</h1>
+        <div class="input-form">
+          <form action="" method="post">
+            <label for="title">Judul Buku</label>
+            <input type="text" name="title" id="title" placeholder="Masukkan judul buku" />
+            <label for="author">Penulis</label>
+            <input type="text" name="author" id="author" placeholder="Masukkan nama penulis" />
+            <label for="year">Tahun</label>
+            <input type="number" name="year" id="year" placeholder="Masukkan tahun terbit" />
+            <div class="checkbox">
+              <input type="checkbox" name="isComplete" id="isComplete" />
+              <label for="isComplete">Selesai dibaca</label>
+            </div>
+            <div class="action">
+              <button type="submit" name="submit">Tambahkan buku</button>
+            </div>
+          </form>
+        </div>
+        <div class="bookshelf">
+          <div class="book-list" id="bookList">
+            <div class="completed-books">
+              <h3 class="book-status">Buku yang sudah selesai dibaca (0)</h3>
+              <div class="book-list" id="completedBookList"></div>
+            </div>
+          </div>
+          <div class="book-list" id="bookList">
+            <div class="uncompleted-books">
+              <h3 class="book-status">Buku yang belum selesai dibaca (0)</h3>
+              <div class="book-list" id="uncompletedBookList"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
