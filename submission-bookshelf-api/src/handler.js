@@ -49,7 +49,7 @@ const addBookHandler = (request, h) => {
   if (pageCount < readPage) {
     const response = h.response({
       status: "fail",
-      message: "Gagal menambahkan buku. readPage tidak boleh lebih dari pageCount",
+      message: "Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount",
     });
 
     response.code(400);
@@ -178,7 +178,7 @@ const editBookHandler = (request, h) => {
 
   const response = h.response({
     status: "fail",
-    message: "Gagal memperbarui buku. bookId tidak ditemukan",
+    message: "Gagal memperbarui buku. Id tidak ditemukan",
   });
 
   response.code(404);
@@ -203,7 +203,7 @@ const deleteBookHandler = (request, h) => {
 
   const response = h.response({
     status: "fail",
-    message: "Buku gagal dihapus. bookId tidak ditemukan",
+    message: "Buku gagal dihapus. Id tidak ditemukan",
   });
 
   response.code(404);
